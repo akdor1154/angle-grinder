@@ -74,6 +74,7 @@ branches:
     # release tags
     - /^v\d+\.\d+\.\d+.*$/
     - master
+    - build-windows
 
 notifications:
   email:
