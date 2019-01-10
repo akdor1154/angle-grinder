@@ -5,9 +5,6 @@ main() {
     if [ $TRAVIS_OS_NAME = linux ]; then
         target=x86_64-unknown-linux-musl
         sort=sort
-    elif [ $TRAVIS_OS_NAME = windows ]; then
-        target=x86_64-pc-windows-msvc
-        sort=sort
     else
         target=x86_64-apple-darwin
         sort=gsort  # for `sort --sort-version`, from brew's coreutils.
@@ -47,4 +44,6 @@ main() {
            --target $target
 }
 
-main
+if [ -z $NATIVE_BUILD ]; then
+    main
+fi

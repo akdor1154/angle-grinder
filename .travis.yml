@@ -23,7 +23,7 @@ matrix:
       rust: stable
 
     # Windows
-    - env: TARGET=x86_64-pc-windows-msvc
+    - env: TARGET=x86_64-pc-windows-msvc NATIVE_BUILD=1
       os: windows
       rust: stable
 
