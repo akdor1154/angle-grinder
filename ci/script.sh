@@ -34,11 +34,11 @@ main_cargo() {
 }
 
 # we don't run the "test phase" when doing deploys
-if [ ! -z $TRAVIS_TAG ]; then
+if [ ! -z "$TRAVIS_TAG" ]; then
     exit 0
 fi
 
-if [ -z $NATIVE_BUILD]; then
+if [ -z "$NATIVE_BUILD" ]; then
     main_cargo
 else
     main_cross
