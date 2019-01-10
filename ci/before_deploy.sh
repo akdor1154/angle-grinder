@@ -21,7 +21,7 @@ main() {
 
     # TODO Update this to build the artifacts that matter to you
 
-    if [ -z $NATIVE_BUILD ]; then
+    if [ "$NATIVE_BUILD" ]; then
         cargo rustc --bin agrind --target $TARGET --release -- -C lto
     else
         cross rustc --bin agrind --target $TARGET --release -- -C lto
