@@ -8,8 +8,7 @@ main() {
           stage=
 
     case $TRAVIS_OS_NAME in
-        linux)
-        windows)
+        linux | windows)
             stage=$(mktemp -d)
             ;;
         osx)
